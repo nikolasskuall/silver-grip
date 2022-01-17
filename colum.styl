@@ -1,30 +1,32 @@
-
-.conten-l, .conten-m, .conten-s{
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
+.cat-row, .row-cat{
+    display: flex;
+    flex-wrap: wrap; 
     }
-.conten-l{
-    width: 100%;
+.cat-row-nw{
+    display: flex;
+    flex-wrap: nowrap; 
     }
-.conten-m{
 
-    width: 91%;
-}
-.conten-s{
-    width: 80%;
-    }
-@media (min-width: 768px)
-        .pc-destroy{
-                display: none;
-        }
+    $colum-u = 12
 
+    for col in $colum-u..1  
+        .colum-u-{col}
+            width (100% / $colum-u) * col
+          
 @media (max-width: 768px)
-        .mv-destroy{
-                display: none;
-        }
-        .conten-l, .conten-m, .conten-s{
-         width: 100%;     
-        }
-            
-        
+
+    $colum-mv = 12
+
+    for col in $colum-mv..1  
+        .colum-mv-{col}
+            width (100% / $colum-mv) * col
+ 
+
+
+@media (min-width: 768px)
+
+    $colum-pc = 12
+
+    for col in $colum-pc..1  
+        .colum-pc-{col}
+            width (100% / $colum-pc) * col
